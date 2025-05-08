@@ -25,29 +25,27 @@ function App() {
       );
       setPokemones(detallesPokemon);
     };
-
     fetchPokemones();
   }, []);
 
   return (
     <>
-      <h1>ℙ𝕠𝕜𝕖𝕕𝕖𝕩 - 𝔻𝕒𝕟𝕟𝕒</h1>
+      <h1>Pokedex - Danna Victoria</h1>
       <h2>Welcome to the Pokedex</h2>
-      <p>ℌ𝔢𝔯𝔢 𝔶𝔬𝔲 𝔠𝔞𝔫 𝔣𝔦𝔫𝔡 𝔦𝔫𝔣𝔬𝔯𝔪𝔞𝔱𝔦𝔬𝔫 𝔞𝔟𝔬𝔲𝔱 𝔶𝔬𝔲𝔯 𝔣𝔞𝔳𝔬𝔯𝔦𝔱𝔢 𝔓𝔬𝔨𝔢𝔪𝔬𝔫.</p>
+      <p>Here you can find information about your favorite Pokemon.</p>
 
       {pokemones.map((pokemon) => (
-        <div className = "card" key={pokemon.id}>
-          <div className = "border" key={pokemon.id}>
-          <h1>{pokemon.nombre } #({pokemon.id})</h1>
+        <div className="card" key={pokemon.id}>
+          <h1>{pokemon.nombre} #({pokemon.id}) </h1>
           <img src={pokemon.imagen} alt="" />
-          <p>Altura : {pokemon.altura / 10} </p>
-          <p>Peso : {pokemon.peso / 10} kg </p>
+          <p>Altura : {pokemon.altura / 10} m</p>
+          <p>Peso: {pokemon.peso / 10} kg </p>
         </div>
       ))}
 
       <div>
-        <p>꧁༺Developed by Danna Victoria ༻꧂</p>
-        <p>₂₀₂₅</p>
+        <p>Developed by Danna Victoria</p>
+        <p>2025</p>
         <p>All rights reserved</p>
       </div>
     </>

@@ -4,12 +4,11 @@
   padding: 2rem;
   text-align: center;
 }
+
 h1{
-  color: pink;
-  
+  color: aqua;
 }
 
-.card{
-  background-color: rgba(255, 0, 136, 0.6);
+h2{
+  color: blue;
 }
-
