@@ -1,14 +1,26 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+body {
+  background-color: #fffaf7; /* fondo suave */
+  font-family: 'Segoe UI', sans-serif;
+ 
 }
 
-h1{
-  color: aqua;
+.card {
+  width: 300px;
+  padding: 20px;
+  background-color: #fff0f5; /* rosa claro */
+  border: 5px solid #f5deb3; /* marco café claro (trigo) */
+  border-radius: 15px;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-h2{
-  color: blue;
+.card h2 {
+  color: #d2b48c; /* café claro (tan) */
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #8b5e3c; /* café medio claro */
+  background-color: #fffacd; /* amarillo claro */
+  padding: 10px;
+  border-radius: 10px;
 }
