@@ -2,6 +2,7 @@ import "./App.css";
 import { useState, useEffect } from "react";
 function App() {
   const [pokemones, setPokemones] = useState([]);
+  const [busquedaPokemon, setBusquedaPokemon] = useState("");
   useEffect(() => {
     const fetchPokemones = async () => {
       const response = await fetch(
@@ -26,15 +27,29 @@ function App() {
       setPokemones(detallesPokemon);
     };
     fetchPokemones();
-  }, []);
 
+  }, []);
+const pokemonesFiltrados = pokemones.filter((p) => {
+  return p.name.toLowerCase().includes(busquedaPokemon)
+})
   return (
     <>
       <h1>Pokedex - Danna Victoria</h1>
       <h2>Welcome to the Pokedex</h2>
       <p>Here you can find information about your favorite Pokemon.</p>
 
-      {pokemones.map((pokemon) => (
+
+<input ClassName="busqueda"
+type="text"
+ placeholder="Busca tu pokemon"
+ value={busquedaPokemon}
+ onChange={(e) => setBusquedaPokemon(e.target.value.toLowerCase())}
+ />
+ {
+
+console.log(busquedaPokemon)
+ }
+      {pokemonesFiltrados.map((pokemon) => (
         <div className="card" key={pokemon.id}>
           <h1>{pokemon.nombre} #({pokemon.id}) </h1>
           <img src={pokemon.imagen} alt="" />
